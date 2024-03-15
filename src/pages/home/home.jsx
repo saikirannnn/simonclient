@@ -78,7 +78,7 @@ const location=useNavigate();
   }, []);
   const getAllScores=async()=>{
     try{
-       const allScores=await axios.get("http://localhost:8000/user/allScores");
+       const allScores=await axios.get("https://simongame-qpib.onrender.com/user/allScores");
        console.log(allScores.data.message);
        const sortedList=allScores.data.message.sort((a,b)=>b.score-a.score);
 
@@ -93,7 +93,7 @@ const location=useNavigate();
     const findScore=async()=>{
     
       try{
-        const res=await axios.post(`http://localhost:8000/user`,{username:name});
+        const res=await axios.post(`https://simongame-qpib.onrender.com/user`,{username:name});
         setScore(res.data.score);
         setScoreloaded(true);
       }
@@ -165,7 +165,7 @@ const location=useNavigate();
     try{
        if(name!==null) {
         
-        const res=await axios.post("http://localhost:8000/user/score",{username:name,score:level});
+        const res=await axios.post("https://simongame-qpib.onrender.com/user/score",{username:name,score:level});
        }
 
     }

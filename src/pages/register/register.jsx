@@ -22,7 +22,7 @@ setPassword(e.target.value);
   const register=async(e)=>{
     e.preventDefault();
 try{
-   const res=await axios.post("http://localhost:8000/register",{username:username,email:email,password:password});
+   const res=await axios.post("https://simongame-qpib.onrender.com/register",{username:username,email:email,password:password});
    toast.success(res.data.message);
    location("/login");
 }

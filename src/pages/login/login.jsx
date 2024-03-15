@@ -19,7 +19,7 @@ const handlepass=(e)=>{
 const login=async (e)=>{
   e.preventDefault();
     try{
-      const res=await axios.post("http://localhost:8000/login",{username:username,password:password});
+      const res=await axios.post("https://simongame-qpib.onrender.com/login",{username:username,password:password});
       console.log(res.data.message);
       toast.success(res.data.message);
       localStorage.setItem("user",username);
